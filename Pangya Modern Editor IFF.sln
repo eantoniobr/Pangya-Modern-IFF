@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pangya Modern Editor IFF", "DevTools\Pangya Modern Editor IFF\Pangya Modern Editor IFF.csproj", "{1740BABD-9FA7-433C-919E-D6C148E5F265}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pangya Modern Editor IFF", "Pangya Modern Editor IFF.csproj", "{1740BABD-9FA7-433C-919E-D6C148E5F265}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PangLib.IFF", "PangLib.IFF\PangLib.IFF.csproj", "{5838F474-6352-43C7-B3CB-7579D2C652C1}"
 EndProject

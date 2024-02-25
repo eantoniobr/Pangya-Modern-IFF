@@ -27,10 +27,11 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\44105206.ico</ApplicationIcon>
@@ -40,7 +41,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
+      <HintPath>packages\Ionic.Zip.1.9.1.8\lib\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -132,7 +133,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="PangLib.IFF\PangLib.IFF.csproj">
+      <Project>{5838f474-6352-43c7-b3cb-7579d2c652c1}</Project>
+      <Name>PangLib.IFF</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\_error.png" />
   </ItemGroup>
@@ -405,12 +411,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nuri.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\PangLib.IFF\PangLib.IFF.csproj">
-      <Project>{5838f474-6352-43c7-b3cb-7579d2c652c1}</Project>
-      <Name>PangLib.IFF</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\44105206.ico" />

@@ -34,7 +34,6 @@ namespace Pangya_Modern_Editor
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Pangya_Modern_Editor.My.MySettings mySettings1 = new Pangya_Modern_Editor.My.MySettings();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.lbModificado = new System.Windows.Forms.Label();
@@ -210,20 +209,10 @@ namespace Pangya_Modern_Editor
             // 
             this.txtDir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            mySettings1.ArquivoIff = "";
-            mySettings1.BuscarImagensGit = false;
-            mySettings1.DiretorioDividir = "";
-            mySettings1.DiretorioIff = "";
-            mySettings1.iffFavorito = "";
-            mySettings1.ImagensWeb = false;
-            mySettings1.SettingsKey = "";
-            mySettings1.TrabalharOffline = true;
-            this.txtDir.DataBindings.Add(new System.Windows.Forms.Binding("Text", mySettings1, "iffFavorito", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.txtDir.Location = new System.Drawing.Point(13, 21);
             this.txtDir.Name = "txtDir";
             this.txtDir.Size = new System.Drawing.Size(341, 20);
             this.txtDir.TabIndex = 0;
-            this.txtDir.Text = mySettings1.iffFavorito;
             this.txtDir.TextChanged += new System.EventHandler(this.txtDir_TextChanged);
             // 
             // gbEditores
@@ -538,9 +527,8 @@ namespace Pangya_Modern_Editor
             // ckOffLine
             // 
             this.ckOffLine.AutoSize = true;
-            this.ckOffLine.Checked = mySettings1.TrabalharOffline;
+            this.ckOffLine.Checked = true;
             this.ckOffLine.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckOffLine.DataBindings.Add(new System.Windows.Forms.Binding("Checked", mySettings1, "TrabalharOffline", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.ckOffLine.Location = new System.Drawing.Point(10, 42);
             this.ckOffLine.Name = "ckOffLine";
             this.ckOffLine.Size = new System.Drawing.Size(111, 17);
@@ -552,8 +540,6 @@ namespace Pangya_Modern_Editor
             // ckImagensGit
             // 
             this.ckImagensGit.AutoSize = true;
-            this.ckImagensGit.Checked = mySettings1.BuscarImagensGit;
-            this.ckImagensGit.DataBindings.Add(new System.Windows.Forms.Binding("Checked", mySettings1, "BuscarImagensGit", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.ckImagensGit.Location = new System.Drawing.Point(10, 19);
             this.ckImagensGit.Name = "ckImagensGit";
             this.ckImagensGit.Size = new System.Drawing.Size(131, 17);
@@ -597,9 +583,7 @@ namespace Pangya_Modern_Editor
             // diagAbrirArquivo
             // 
             this.diagAbrirArquivo.DefaultExt = "iff";
-            this.diagAbrirArquivo.FileName = mySettings1.ArquivoIff;
             this.diagAbrirArquivo.Filter = "Pangya File (*.iff)|*.iff";
-            this.diagAbrirArquivo.InitialDirectory = mySettings1.DiretorioIff;
             this.diagAbrirArquivo.RestoreDirectory = true;
             this.diagAbrirArquivo.Title = "Abrir arquivo (Part.iff)";
             // 
@@ -618,7 +602,6 @@ namespace Pangya_Modern_Editor
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPrincipal";
-            this.Opacity = 0.7D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor de IFF";
             this.GroupBox1.ResumeLayout(false);
